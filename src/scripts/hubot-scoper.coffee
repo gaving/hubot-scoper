@@ -21,7 +21,7 @@
 moment = require 'moment'
 
 module.exports = (robot) ->
-    robot.hear /hey (scoper|hubot)/i, (res) ->
+    robot.hear (new RegExp("^h(i|[ei]ya?|ello)\\s+(there\\s+?)?(scoper|hubot|#{robot.name})", 'i')), (res) ->
         res.send "hey there #{res.message.user.name}"
     robot.hear /^(\.l|l|lunch)$/i, (res) ->
         res.send moment('12:00', 'HH:mm').fromNow()
