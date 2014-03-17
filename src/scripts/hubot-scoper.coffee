@@ -32,5 +32,5 @@ module.exports = (robot) ->
         res.send "never mind, lunch " + moment('12:00', 'HH:mm').fromNow()
     robot.hear /^(\.coffee|\.tea)/i, (res) ->
         res.send c.rainbow(res.message.text.substr(1))
-    robot.hear /(\.pack)/i, (res) ->
+    robot.hear /(\.pack|\.dave)/i, (res) ->
         res.send c.rainbow('Pack it up pack it in let me begin\nI came to win Battle me thats a sin')
