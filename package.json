@@ -34,7 +34,8 @@
     "grunt-simple-mocha": "~0.4.0",
     "should": "~1.2.2",
     "grunt": "~0.4.3",
-    "moment": "~2.5.1"
+    "moment": "~2.5.1",
+    "irc-colors": "~1.0.3"
   },
   "keywords": [
     "hubot"

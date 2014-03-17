@@ -19,6 +19,7 @@
 
 'use strict'
 moment = require 'moment'
+c = require 'irc-colors'
 
 module.exports = (robot) ->
     robot.hear (new RegExp("^h(i|[ei]ya?|ello)\\s+(there\\s+?)?(scoper|hubot|#{robot.name})", 'i')), (res) ->
@@ -29,3 +30,7 @@ module.exports = (robot) ->
         res.send moment('15:30', 'HH:mm').fromNow()
     robot.hear /(long morning)/i, (res) ->
         res.send "never mind, lunch " + moment('12:00', 'HH:mm').fromNow()
+    robot.hear /^(\.coffee|\.tea)/i, (res) ->
+        res.send c.rainbow(res.message.text.substr(1))
+    robot.hear /(\.pack)/i, (res) ->
+        res.send c.rainbow('Pack it up pack it in let me begin\nI came to win Battle me thats a sin')
