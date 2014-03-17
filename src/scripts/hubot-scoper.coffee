@@ -27,3 +27,5 @@ module.exports = (robot) ->
         res.send moment('12:00', 'HH:mm').fromNow()
     robot.hear /^(\.rh|rh|hometime|realhometime)$/i, (res) ->
         res.send moment('15:30', 'HH:mm').fromNow()
+    robot.hear /(long morning)/i, (res) ->
+        res.send "never mind, lunch " + moment('12:00', 'HH:mm').fromNow()
