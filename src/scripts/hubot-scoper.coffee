@@ -36,3 +36,5 @@ module.exports = (robot) ->
         res.send c.rainbow('Pack it up pack it in let me begin\nI came to win Battle me thats a sin')
     robot.hear /(diplomatic incident)/i, (res) ->
         res.send c.rainbow('Diplomatic Immunity<snort> BLAM "It\'s just been revoked"')
+    robot.hear /tpscope/i, (res) ->
+        res.send "LOL " + c.blue('tpscope') + ", are you still using that shit"
