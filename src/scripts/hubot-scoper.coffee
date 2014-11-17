@@ -20,6 +20,7 @@
 'use strict'
 moment = require 'moment'
 c = require 'irc-colors'
+_ = require 'underscore'
 
 module.exports = (robot) ->
     robot.hear (new RegExp("^h(i|[ei]ya?|ello)\\s+(there\\s+?)?(scoper|hubot|#{robot.name})", 'i')), (res) ->
@@ -40,3 +41,6 @@ module.exports = (robot) ->
         res.send "LOL " + c.blue('tpscope') + ", are you still using that shit"
     robot.hear /(buh buh)/i, (res) ->
         res.send "buh buh buh buh?"
+    robot.hear /i+n+t+e+r+e+s+t+i+n+g/i, (res) ->
+        res.send do (o = 'omnom') ->
+            c.rainbow((omnom = Array(_.random(2,10)).join nom for nom in o).join(''))
